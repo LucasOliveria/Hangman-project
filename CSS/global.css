@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+button,
+select {
+    cursor: url("../assets/chalk.png"), auto;
+}
+
+h1 {
+    font-family: 'Caveat Brush', cursive;
+    color: #ffffff;
+}
+
+main,
+section,
+.modal-loser,
+.modal-win {
+    font-family: 'Schoolbell', cursive;
+    font-size: 30px;
+}
+
+button,
+select {
+    all: unset;
+    color: #ffffff;
+}

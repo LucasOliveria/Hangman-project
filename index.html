@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="./assets/favicon 2.png" type="image/x-icon">
+    <link rel="stylesheet" href="./CSS/global.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+
+    <title>Jogo da forca</title>
+</head>
+
+<body>
+    <audio id="appear-sound" src="./audio/play-chalk.wav"></audio>
+    <audio id="fast-sound" src="./audio/fast-chalk.wav"></audio>
+    <audio id="select-sound" src="./audio/chalk-select-theme.wav"></audio>
+    <audio id="hangmans-laugh" src="./audio/hangman's-laugh.wav"></audio>
+    <audio id="correct-guess-sound" src="./audio/correctGuess.wav"></audio>
+    <audio id="death-bell-sound" src="./audio/death-bell.wav"></audio>
+    <audio id="game-over-voice" src="./audio/game-over-voice.wav"></audio>
+    <audio id="victory-sound" src="./audio/victory.wav"></audio>
+    <audio id="you-win-voice" src="./audio/you-win-voice.wav"></audio>
+
+    <header>
+        <h1>Jogo da Forca</h1>
+    </header>
+
+    <main>
+        <div class="hangman-container">
+            <img src="./assets/tie.png" alt="forca">
+
+            <div class="head disappear"></div>
+            <div class="body disappear"></div>
+            <div class="left-arm disappear"></div>
+            <div class="right-arm disappear"></div>
+            <div class="left-leg disappear"></div>
+            <div class="right-leg disappear"></div>
+        </div>
+
+        <div class="start-game">
+            <form>
+                <select name="theme" id="select-theme">
+                    <option value="">Escolha um tema</option>
+                    <option value="animals">Animal</option>
+                    <option value="countries">País</option>
+                    <option value="fruits">Fruta</option>
+                    <option value="objects">Objeto</option>
+                </select>
+
+                <span class="message"></span>
+
+                <button class="start-btn appear-fast">COMEÇAR</button>
+            </form>
+        </div>
+    </main>
+
+    <section class="choose-letter disappear ">
+        <h2>Escolha uma letra</h2>
+        <div class="choice-buttons">
+            <button id="a" class="choice-btn">A</button>
+            <button id="b" class="choice-btn">B</button>
+            <button id="c" class="choice-btn">C</button>
+            <button id="d" class="choice-btn">D</button>
+            <button id="e" class="choice-btn">E</button>
+            <button id="f" class="choice-btn">F</button>
+            <button id="g" class="choice-btn">G</button>
+            <button id="h" class="choice-btn">H</button>
+            <button id="i" class="choice-btn">I</button>
+            <button id="j" class="choice-btn">J</button>
+            <button id="k" class="choice-btn">K</button>
+            <button id="l" class="choice-btn">L</button>
+            <button id="m" class="choice-btn">M</button>
+            <button id="n" class="choice-btn">N</button>
+            <button id="o" class="choice-btn">O</button>
+            <button id="p" class="choice-btn">P</button>
+            <button id="q" class="choice-btn">Q</button>
+            <button id="r" class="choice-btn">R</button>
+            <button id="s" class="choice-btn">S</button>
+            <button id="t" class="choice-btn">T</button>
+            <button id="u" class="choice-btn">U</button>
+            <button id="v" class="choice-btn">V</button>
+            <button id="w" class="choice-btn">W</button>
+            <button id="x" class="choice-btn">X</button>
+            <button id="y" class="choice-btn">Y</button>
+            <button id="z" class="choice-btn">Z</button>
+            <button id="ç" class="choice-btn">Ç</button>
+        </div>
+    </section>
+
+    <div class="modal-loser">
+        <div class="modal-loser-container">
+            <h1>FIM DE JOGO!</h1>
+
+            <img class="rip-modal" src="./assets/rip.png" alt="rip">
+
+            <h2>A PALAVRA ERA:</h2>
+
+            <span class="modal-span"></span>
+
+            <button class="reset-btn">JOGAR NOVAMENTE</button>
+        </div>
+    </div>
+
+    <div class="modal-win">
+        <div class="modal-win-container">
+            <h1>VOCÊ VENCEU!</h1>
+
+            <img class="win-modal" src="./assets/victory.png" alt="win">
+
+            <h2>A PALAVRA ERA:</h2>
+
+            <span class="modal-span"></span>
+
+            <button class="reset-btn">JOGAR NOVAMENTE</button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./JS/lists.js"></script>
+    <script src="./JS/script.js"></script>
+</body>
+
+</html>

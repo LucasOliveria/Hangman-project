@@ -1,0 +1,302 @@
+body {
+    height: 100vh;
+    background-image: url("../assets/blackboard.jpg");
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    position: relative;
+}
+
+header h1 {
+    font-size: 45px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+    padding-right: 50px;
+}
+
+.hangman-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.hangman-container img {
+    width: 300px;
+}
+
+.head {
+    width: 70px;
+    height: 70px;
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: 85px;
+    left: 169px;
+}
+
+.body {
+    height: 100px;
+    border: 2px solid white;
+    position: absolute;
+    top: 152px;
+    left: 203px;
+}
+
+.left-arm {
+    height: 100px;
+    border: 2px solid white;
+    position: absolute;
+    top: 160px;
+    left: 185px;
+    transform: skew(-20deg);
+}
+
+.right-arm {
+    height: 100px;
+    border: 2px solid white;
+    position: absolute;
+    top: 160px;
+    left: 221px;
+    transform: skew(20deg);
+}
+
+.left-leg {
+    height: 100px;
+    border: 2px solid white;
+    position: absolute;
+    top: 250px;
+    left: 185px;
+    transform: skew(-20deg);
+}
+
+.right-leg {
+    height: 100px;
+    border: 2px solid white;
+    position: absolute;
+    top: 250px;
+    left: 221px;
+    transform: skew(20deg);
+}
+
+.word {
+    /* display: flex;
+    flex-wrap: wrap; */
+    align-self: center;
+    color: #ffffff;
+    font-size: 65px;
+    font-weight: bold;
+}
+
+.word span {
+    margin-left: 20px;
+}
+
+.start-game {
+    padding-left: 50px;
+    border-left: 2px solid #ffffff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+select {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+select,
+.message,
+h2 {
+    color: #f08080;
+}
+
+option {
+    width: auto;
+    font-weight: bold;
+    text-align: center;
+}
+
+option[value="animals"] {
+    color: #32cd32;
+}
+
+option[value="countries"] {
+    color: #8a2be2;
+}
+
+option[value="fruits"] {
+    color: #dc143c;
+}
+
+option[value="objects"] {
+    color: #ff8c00;
+}
+
+.message {
+    font-size: 25px;
+    color: #20b2aa;
+}
+
+.start-btn {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.start-btn:hover,
+.choice-btn:hover,
+.reset-btn:hover {
+    font-weight: bold;
+    color: #20b2aa;
+    text-shadow: 5px 5px #000000;
+}
+
+.choose-letter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.choose-letter h2 {
+    font-size: 35px;
+    margin-bottom: 15PX;
+}
+
+.choice-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 88vw;
+    height: 10vh;
+}
+
+.choice-btn {
+    font-size: 45px;
+}
+
+.choice-btn:hover {
+    margin-bottom: 20px;
+}
+
+.modal-loser,
+.modal-win {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    font-size: 40px;
+    background-image: url("../assets/blackboard.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    position: fixed;
+}
+
+.modal-loser {
+    visibility: hidden;
+}
+
+.modal-loser-container,
+.modal-win-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+    min-width: 500px;
+    height: 90vh;
+    padding-left: 5px;
+    padding-right: 5px;
+    /* border: 10px inset #ffffff91; */
+    overflow-y: auto;
+}
+
+.modal-loser-container h1,
+.modal-win-container h1 {
+    margin-bottom: 5px;
+}
+
+.rip-modal {
+    width: 350px;
+}
+
+.win-modal {
+    width: 250px;
+}
+
+.modal-loser-container h2,
+.modal-win-container h2 {
+    font-size: 40px;
+}
+
+.modal-loser-container span,
+.modal-win-container span {
+    font-size: 45px;
+    color: #ffffff;
+}
+
+.reset-btn {
+    height: 100px;
+    font-size: 40px;
+}
+
+.modal-win {
+    visibility: hidden;
+}
+
+/* classes para JS */
+.chosen {
+    color: #f08080;
+    text-decoration: line-through;
+    text-decoration-color: #20b2aa;
+}
+
+.chosen:hover {
+    font-weight: normal;
+    color: #f08080;
+    margin-bottom: 0px;
+    text-shadow: none;
+}
+
+.appear {
+    visibility: visible;
+    opacity: 1;
+    transition: 3s ease-in-out;
+}
+
+.disappear {
+    visibility: hidden;
+    opacity: 0;
+    transition: 3s ease-in-out;
+}
+
+.disappear-fast {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.appear-fast {
+    visibility: visible;
+    opacity: 1;
+}
+
+.cursor-cancel-allowed {
+    cursor: url("../assets/cancel-chalk.png"), not-allowed;
+}
+
+.cursor-chalk {
+    cursor: url("../assets/chalk.png"), auto;
+}
