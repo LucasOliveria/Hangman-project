@@ -85,7 +85,6 @@ function randomlyPick() {
 
     }
 
-    console.log(random);
     return random;
 }
 
