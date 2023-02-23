@@ -33,7 +33,7 @@
 <img src="image/Tela de vitória.png" alt="Vitória">
 
 <p>Tela Game Over</p>
-<img src="image/Tela de Game Over.png" alt="Game Over">
+<img src="image/Game Over.png" alt="Game Over">
 
 <p style="text-align: justify;">
  <b>OBS.: Ainda não está responsívo em versões mobiles. Novas atualizações em breve!</b>
