@@ -18,6 +18,27 @@
     A cada palpite errado, a aplicação mostrará na tela uma parte do corpo do boneco, sendo 6, o número de palpites errados que o jogador pode jogar. O usuário vence se acertar todas as letras que compõem a palavra ou perde caso todas as 6 partes do boneco sejam mostradas na tela.
 </p>
 
+<h2 style="font-family: sans-serif;">Layout:</h2>
+
+<p>Tela inicial</p>
+<img src="image/Tela Inicial.png" alt="Tela Inicial">
+
+<p>Início de jogo</p>
+<img src="image/Jogo Iniciado.png" alt="Jogo Iniciado">
+
+<p>Escolhendo Palpites</p>
+<img src="image/Escolhendo os palpites.png" alt="Escolhendo Palpites">
+
+<p>Tela de vitória</p>
+<img src="image/Tela de vitória.png" alt="Vitória">
+
+<p>Tela Game Over</p>
+<img src="image/Tela de Game Over.png" alt="Game Over">
+
+<p style="text-align: justify;">
+ <b>OBS.: Ainda não está responsívo em versões mobiles. Novas atualizações em breve!</b>
+</p>
+
 <h2 style="font-family: sans-serif;">Tecnologias utilizadas</h2>
 
 <ul>
@@ -32,11 +53,6 @@
 <p>Lucas Oliveira</p>
 
 <a href="http://www.linkedin.com/in/lucas-de-oliveira-5b8a5532" target="_blank">LinkedIn</a>
+<br>
 <a href="https://hangman-project-olivr.netlify.app/" target="_blank">Site do Jogo</a>
 <br>
-
-<p style="text-align: justify;">
-    Divirta-se
-</p>
-
-<img src="./assets/tie.png" alt="forca">
