@@ -52,6 +52,8 @@
 
 <p>Lucas Oliveira</p>
 
+<h2 style="font-family: sans-serif;">Links</h2>
+
 <a href="http://www.linkedin.com/in/lucas-de-oliveira-5b8a5532" target="_blank">LinkedIn</a>
 <br>
 <a href="https://hangman-project-olivr.netlify.app/" target="_blank">Site do Jogo</a>
