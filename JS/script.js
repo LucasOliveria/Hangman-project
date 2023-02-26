@@ -107,11 +107,6 @@ function checkGuess(guess) {
     let correctGuess = false;
     let haveDashes = false;
 
-    guess.classList.add("chosen");
-    guess.classList.add("cursor-cancel-allowed");
-    guess.classList.remove("cursor-chalk");
-    guess.setAttribute("disabled", "disabled");
-
     for (let i = 0; i < random.length; i++) {
         if (guess.textContent === random[i]) {
             spanLetter[i].textContent = guess.textContent;
@@ -289,113 +284,15 @@ startBtn.addEventListener("click", (event) => {
     }
 });
 
-letterA.addEventListener("click", () => {
-    checkGuess(letterA);
-});
-
-letterB.addEventListener("click", () => {
-    checkGuess(letterB);
-});
-
-letterC.addEventListener("click", () => {
-    checkGuess(letterC);
-});
-
-letterD.addEventListener("click", () => {
-    checkGuess(letterD);
-});
-
-letterE.addEventListener("click", () => {
-    checkGuess(letterE);
-});
-
-letterF.addEventListener("click", () => {
-    checkGuess(letterF);
-});
-
-letterG.addEventListener("click", () => {
-    checkGuess(letterG);
-});
-
-letterH.addEventListener("click", () => {
-    checkGuess(letterH);
-});
-
-letterI.addEventListener("click", () => {
-    checkGuess(letterI);
-});
-
-letterJ.addEventListener("click", () => {
-    checkGuess(letterJ);
-});
-
-letterK.addEventListener("click", () => {
-    checkGuess(letterK);
-});
-
-letterL.addEventListener("click", () => {
-    checkGuess(letterL);
-});
-
-letterM.addEventListener("click", () => {
-    checkGuess(letterM);
-});
-
-letterN.addEventListener("click", () => {
-    checkGuess(letterN);
-});
-
-letterO.addEventListener("click", () => {
-    checkGuess(letterO);
-});
-
-letterP.addEventListener("click", () => {
-    checkGuess(letterP);
-});
-
-letterQ.addEventListener("click", () => {
-    checkGuess(letterQ);
-});
-
-letterR.addEventListener("click", () => {
-    checkGuess(letterR);
-});
-
-letterS.addEventListener("click", () => {
-    checkGuess(letterS);
-});
-
-letterT.addEventListener("click", () => {
-    checkGuess(letterT);
-});
-
-letterU.addEventListener("click", () => {
-    checkGuess(letterU);
-});
-
-letterV.addEventListener("click", () => {
-    checkGuess(letterV);
-});
-
-letterW.addEventListener("click", () => {
-    checkGuess(letterW);
-});
-
-letterX.addEventListener("click", () => {
-    checkGuess(letterX);
-});
-
-letterY.addEventListener("click", () => {
-    checkGuess(letterY);
-});
-
-letterZ.addEventListener("click", () => {
-    checkGuess(letterZ);
-});
-
-letterÇ.addEventListener("click", () => {
-    checkGuess(letterÇ);
-});
+for (let i = 0; i < choiceBtn.length; i++) {
+    choiceBtn[i].addEventListener("click", () => {
+        choiceBtn[i].classList.add("chosen");
+        choiceBtn[i].classList.add("cursor-cancel-allowed");
+        choiceBtn[i].classList.remove("cursor-chalk");
+        choiceBtn[i].setAttribute("disabled", "disabled")
+        checkGuess(choiceBtn[i]);
+    })
+}
 
 resetBtn[0].addEventListener("click", () => {
     setTimeout(() => {
@@ -439,13 +336,3 @@ resetBtn[1].addEventListener("click", () => {
     resetBtn[1].setAttribute("disabled", "disabled");
     resetGame();
 });
-
-// for (let i = 0; i < choiceBtn.length; i++) {
-//     choiceBtn[i].addEventListener("click", () => {
-//         choiceBtn[i].classList.add("chosen");
-//         choiceBtn[i].classList.add("cursor-cancel-allowed");
-//         choiceBtn[i].classList.remove("cursor-chalk");
-//         choiceBtn[i].setAttribute("disabled", "disabled")
-//         checkGuess(choiceBtn[i]);
-//     })
-// }
