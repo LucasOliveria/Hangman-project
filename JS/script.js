@@ -439,13 +439,3 @@ resetBtn[1].addEventListener("click", () => {
     resetBtn[1].setAttribute("disabled", "disabled");
     resetGame();
 });
-
-// for (let i = 0; i < choiceBtn.length; i++) {
-//     choiceBtn[i].addEventListener("click", () => {
-//         choiceBtn[i].classList.add("chosen");
-//         choiceBtn[i].classList.add("cursor-cancel-allowed");
-//         choiceBtn[i].classList.remove("cursor-chalk");
-//         choiceBtn[i].setAttribute("disabled", "disabled")
-//         checkGuess(choiceBtn[i]);
-//     })
-// }
