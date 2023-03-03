@@ -24,33 +24,6 @@ const startBtn = document.querySelector(".start-btn");
 
 const chooseLetter = document.querySelector(".choose-letter");
 const choiceBtn = document.querySelectorAll(".choice-btn");
-const letterA = document.querySelector("#a");
-const letterB = document.querySelector("#b");
-const letterC = document.querySelector("#c");
-const letterD = document.querySelector("#d");
-const letterE = document.querySelector("#e");
-const letterF = document.querySelector("#f");
-const letterG = document.querySelector("#g");
-const letterH = document.querySelector("#h");
-const letterI = document.querySelector("#i");
-const letterJ = document.querySelector("#j");
-const letterK = document.querySelector("#k");
-const letterL = document.querySelector("#l");
-const letterM = document.querySelector("#m");
-const letterN = document.querySelector("#n");
-const letterO = document.querySelector("#o");
-const letterP = document.querySelector("#p");
-const letterQ = document.querySelector("#q");
-const letterR = document.querySelector("#r");
-const letterS = document.querySelector("#s");
-const letterT = document.querySelector("#t");
-const letterU = document.querySelector("#u");
-const letterV = document.querySelector("#v");
-const letterW = document.querySelector("#w");
-const letterX = document.querySelector("#x");
-const letterY = document.querySelector("#y");
-const letterZ = document.querySelector("#z");
-const letterÇ = document.querySelector("#ç");
 
 const modalLoser = document.querySelector(".modal-loser");
 const modalSpan = document.querySelectorAll(".modal-span");
@@ -84,7 +57,7 @@ function randomlyPick() {
         random = objects[parseInt(Math.random() * objects.length)];
 
     }
-
+    console.log(random);
     return random;
 }
 
@@ -106,11 +79,6 @@ function checkGuess(guess) {
     const spanLetter = document.querySelectorAll(".span-letter");
     let correctGuess = false;
     let haveDashes = false;
-
-    guess.classList.add("chosen");
-    guess.classList.add("cursor-cancel-allowed");
-    guess.classList.remove("cursor-chalk");
-    guess.setAttribute("disabled", "disabled");
 
     for (let i = 0; i < random.length; i++) {
         if (guess.textContent === random[i]) {
@@ -289,113 +257,15 @@ startBtn.addEventListener("click", (event) => {
     }
 });
 
-letterA.addEventListener("click", () => {
-    checkGuess(letterA);
-});
-
-letterB.addEventListener("click", () => {
-    checkGuess(letterB);
-});
-
-letterC.addEventListener("click", () => {
-    checkGuess(letterC);
-});
-
-letterD.addEventListener("click", () => {
-    checkGuess(letterD);
-});
-
-letterE.addEventListener("click", () => {
-    checkGuess(letterE);
-});
-
-letterF.addEventListener("click", () => {
-    checkGuess(letterF);
-});
-
-letterG.addEventListener("click", () => {
-    checkGuess(letterG);
-});
-
-letterH.addEventListener("click", () => {
-    checkGuess(letterH);
-});
-
-letterI.addEventListener("click", () => {
-    checkGuess(letterI);
-});
-
-letterJ.addEventListener("click", () => {
-    checkGuess(letterJ);
-});
-
-letterK.addEventListener("click", () => {
-    checkGuess(letterK);
-});
-
-letterL.addEventListener("click", () => {
-    checkGuess(letterL);
-});
-
-letterM.addEventListener("click", () => {
-    checkGuess(letterM);
-});
-
-letterN.addEventListener("click", () => {
-    checkGuess(letterN);
-});
-
-letterO.addEventListener("click", () => {
-    checkGuess(letterO);
-});
-
-letterP.addEventListener("click", () => {
-    checkGuess(letterP);
-});
-
-letterQ.addEventListener("click", () => {
-    checkGuess(letterQ);
-});
-
-letterR.addEventListener("click", () => {
-    checkGuess(letterR);
-});
-
-letterS.addEventListener("click", () => {
-    checkGuess(letterS);
-});
-
-letterT.addEventListener("click", () => {
-    checkGuess(letterT);
-});
-
-letterU.addEventListener("click", () => {
-    checkGuess(letterU);
-});
-
-letterV.addEventListener("click", () => {
-    checkGuess(letterV);
-});
-
-letterW.addEventListener("click", () => {
-    checkGuess(letterW);
-});
-
-letterX.addEventListener("click", () => {
-    checkGuess(letterX);
-});
-
-letterY.addEventListener("click", () => {
-    checkGuess(letterY);
-});
-
-letterZ.addEventListener("click", () => {
-    checkGuess(letterZ);
-});
-
-letterÇ.addEventListener("click", () => {
-    checkGuess(letterÇ);
-});
+for (let i = 0; i < choiceBtn.length; i++) {
+    choiceBtn[i].addEventListener("click", () => {
+        choiceBtn[i].classList.add("chosen");
+        choiceBtn[i].classList.add("cursor-cancel-allowed");
+        choiceBtn[i].classList.remove("cursor-chalk");
+        choiceBtn[i].setAttribute("disabled", "disabled")
+        checkGuess(choiceBtn[i]);
+    })
+}
 
 resetBtn[0].addEventListener("click", () => {
     setTimeout(() => {
