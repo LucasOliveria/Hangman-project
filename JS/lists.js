@@ -21,12 +21,3 @@ const objects = ["LATA", "ALICATE", "AGULHA", "ADAGA", "ANEL", "ANTENA", "ARCO",
 objects.sort((a, b) => {
     return a.localeCompare(b);
 });
-
-// let letra = "Ô";
-// let letra2 = "O";
-
-// if (letra.normalize("NFD").replace(/[\u0300-\u036f]/g, "") === letra2.normalize("NFD").replace(/[\u0300-\u036f]/g, "")) {
-//     console.log("iguais");
-// } else {
-//     console.log("diferente");
-// }

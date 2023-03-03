@@ -84,8 +84,6 @@ main {
 }
 
 .word {
-    /* display: flex;
-    flex-wrap: wrap; */
     align-self: center;
     color: #ffffff;
     font-size: 65px;
@@ -170,7 +168,7 @@ option[value="objects"] {
 
 .choose-letter h2 {
     font-size: 35px;
-    margin-bottom: 15PX;
+    margin-bottom: 15px;
 }
 
 .choice-buttons {
@@ -220,7 +218,6 @@ option[value="objects"] {
     height: 90vh;
     padding-left: 5px;
     padding-right: 5px;
-    /* border: 10px inset #ffffff91; */
     overflow-y: auto;
 }
 
@@ -257,7 +254,6 @@ option[value="objects"] {
     visibility: hidden;
 }
 
-/* classes para JS */
 .chosen {
     color: #f08080;
     text-decoration: line-through;
