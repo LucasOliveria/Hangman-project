@@ -24,33 +24,6 @@ const startBtn = document.querySelector(".start-btn");
 
 const chooseLetter = document.querySelector(".choose-letter");
 const choiceBtn = document.querySelectorAll(".choice-btn");
-const letterA = document.querySelector("#a");
-const letterB = document.querySelector("#b");
-const letterC = document.querySelector("#c");
-const letterD = document.querySelector("#d");
-const letterE = document.querySelector("#e");
-const letterF = document.querySelector("#f");
-const letterG = document.querySelector("#g");
-const letterH = document.querySelector("#h");
-const letterI = document.querySelector("#i");
-const letterJ = document.querySelector("#j");
-const letterK = document.querySelector("#k");
-const letterL = document.querySelector("#l");
-const letterM = document.querySelector("#m");
-const letterN = document.querySelector("#n");
-const letterO = document.querySelector("#o");
-const letterP = document.querySelector("#p");
-const letterQ = document.querySelector("#q");
-const letterR = document.querySelector("#r");
-const letterS = document.querySelector("#s");
-const letterT = document.querySelector("#t");
-const letterU = document.querySelector("#u");
-const letterV = document.querySelector("#v");
-const letterW = document.querySelector("#w");
-const letterX = document.querySelector("#x");
-const letterY = document.querySelector("#y");
-const letterZ = document.querySelector("#z");
-const letterÇ = document.querySelector("#ç");
 
 const modalLoser = document.querySelector(".modal-loser");
 const modalSpan = document.querySelectorAll(".modal-span");
@@ -84,7 +57,7 @@ function randomlyPick() {
         random = objects[parseInt(Math.random() * objects.length)];
 
     }
-
+    console.log(random);
     return random;
 }
 
