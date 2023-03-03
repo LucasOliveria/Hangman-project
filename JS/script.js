@@ -57,7 +57,7 @@ function randomlyPick() {
         random = objects[parseInt(Math.random() * objects.length)];
 
     }
-    console.log(random);
+
     return random;
 }
 
@@ -264,7 +264,7 @@ for (let i = 0; i < choiceBtn.length; i++) {
         choiceBtn[i].classList.remove("cursor-chalk");
         choiceBtn[i].setAttribute("disabled", "disabled")
         checkGuess(choiceBtn[i]);
-    })
+    });
 }
 
 resetBtn[0].addEventListener("click", () => {
@@ -294,7 +294,7 @@ resetBtn[1].addEventListener("click", () => {
     }, 4000);
 
     const reading = setInterval(() => {
-        resetBtn[1].textContent = `${countReset}`;
+        resetBtn[1].textContent = countReset;
 
         countReset--;
 
