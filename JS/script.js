@@ -67,7 +67,7 @@ function createDashes() {
 
     main.insertBefore(wordContainer, cotainerStartGame);
 
-    for (const letter of random) {
+    for (let i = 0; i < random.length; i++) {
         const spanLetter = document.createElement("span");
         spanLetter.classList.add("span-letter");
         spanLetter.textContent = "_";
@@ -197,6 +197,7 @@ function resetGame() {
     selectTheme.removeAttribute("disabled");
     selectTheme.classList.add("cursor-chalk");
     selectTheme.classList.remove("cursor-cancel-allowed");
+    selectTheme.style.color = "#f08080";
     selectTheme.value = "";
 
     tieImage.src = "./assets/tie.png";
@@ -262,7 +263,7 @@ for (let i = 0; i < choiceBtn.length; i++) {
         choiceBtn[i].classList.add("chosen");
         choiceBtn[i].classList.add("cursor-cancel-allowed");
         choiceBtn[i].classList.remove("cursor-chalk");
-        choiceBtn[i].setAttribute("disabled", "disabled")
+        choiceBtn[i].setAttribute("disabled", "disabled");
         checkGuess(choiceBtn[i]);
     });
 }
