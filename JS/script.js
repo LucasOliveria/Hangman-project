@@ -104,10 +104,6 @@ function checkGuess(guess) {
             headContainer.classList.replace("disappear", "appear");
             return;
 
-        } else if (headContainer.classList.contains("disappear")) {
-            headContainer.classList.replace("disappear", "appear");
-            return;
-
         } else if (bodyContainer.classList.contains("disappear")) {
             bodyContainer.classList.replace("disappear", "appear");
             return;
