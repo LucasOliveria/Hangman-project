@@ -203,7 +203,8 @@ option[value="objects"] {
     position: fixed;
 }
 
-.modal-loser {
+.modal-loser,
+.modal-win {
     visibility: hidden;
 }
 
@@ -248,10 +249,6 @@ option[value="objects"] {
 .reset-btn {
     height: 100px;
     font-size: 40px;
-}
-
-.modal-win {
-    visibility: hidden;
 }
 
 .chosen {
