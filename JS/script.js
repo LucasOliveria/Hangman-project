@@ -58,6 +58,7 @@ function randomlyPick() {
 
     }
 
+    // random = "ÀÁÂÃÉÊÈÍÌÎÓÒÔÚÙÛÃÕAEIOU";
     return random;
 }
 
@@ -81,8 +82,8 @@ function checkGuess(guess) {
     let haveDashes = false;
 
     for (let i = 0; i < random.length; i++) {
-        if (guess.textContent === random[i]) {
-            spanLetter[i].textContent = guess.textContent;
+        if (guess.textContent === random[i].normalize("NFD").replace(/[\u0300-\u036f]/g, "")) {
+            spanLetter[i].textContent = random[i];
             correctGuess = true;
 
             selectThemeAudio.play();
